@@ -1,7 +1,7 @@
 {
   "name": "spotify-wapper",
   "version": "1.0.0",
-  "description": "A wrapper to work with the [Spotify Web API]",
+  "description": "A wrapper to work with the Spotify Web API",
   "main": "index.js",
   "scripts": {
     "lint": "npx eslint src/*.js ",
@@ -13,12 +13,17 @@
     "functions": 80,
     "lines": 80,
     "check-coverage": true,
-    "reporter": ["text", "html"],
-    "exclude": ["tests/**"]
+    "reporter": [
+      "text",
+      "html"
+    ],
+    "exclude": [
+      "tests/**"
+    ]
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/GuiSAlmeida/js-tdd.git"
+    "url": "git+https://github.com/GuiSAlmeida/spotify-wrapper.git"
   },
   "keywords": [
     "js",
@@ -28,9 +33,9 @@
   "author": "Guilherme Almeida <guisalmeida.dev@gmail.com> (https://guisalmeida.com/)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/GuiSAlmeida/js-tdd/issues"
+    "url": "https://github.com/GuiSAlmeida/spotify-wrapper/issues"
   },
-  "homepage": "https://github.com/GuiSAlmeida/js-tdd#readme",
+  "homepage": "https://github.com/GuiSAlmeida/spotify-wrapper#readme",
   "devDependencies": {
     "babel-preset-env": "^1.7.0",
     "babel-register": "^6.26.0",
@@ -40,7 +45,11 @@
     "eslint-plugin-import": "^2.22.0",
     "husky": "^4.2.5",
     "mocha": "^8.0.1",
+    "node-fetch": "^2.6.0",
     "nyc": "^15.1.0",
+    "sinon": "^9.0.2",
+    "sinon-chai": "^3.5.0",
+    "sinon-stub-promise": "^4.0.0",
     "uglifyjs-webpack-plugin": "^2.2.0"
   },
   "husky": {
