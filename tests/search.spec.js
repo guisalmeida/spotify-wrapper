@@ -1,14 +1,14 @@
 import chai, { expect } from 'chai';
-
 import sinon from 'sinon';
 import sinonChai from 'sinon-chai'; // integração sinon com chai
-chai.use(sinonChai); // chai que asserts do sinonchai
 
-import { search, searchAlbums, searchArtists, searchTracks, searchPlaylists } from '../src/main';
+import { search, searchAlbums, searchArtists, searchTracks, searchPlaylists } from '../src/search';
+
+chai.use(sinonChai); // chai que asserts do sinonchai
 
 global.fetch = require('node-fetch');
 
-describe('Spotify wrapper', () => {
+describe('Search', () => {
   let stubedFetch;
   let promise;
 
@@ -69,14 +69,14 @@ describe('Spotify wrapper', () => {
     });
 
     // it('should return the correct data from Promise', () => {
-    //   const album = spotify.album.getAlbum('4aawyAB9vmqN3uQ7FjRGTy');
+    //   const album = getAlbum('4aawyAB9vmqN3uQ7FjRGTy');
     //   album.then((data) => {
     //     expect(data).to.be.eql({ album: 'name' });
     //   });
     // });
 
     // it('should return the correct data from Promise', () => {
-    //   const tracks = spotify.album.getTracks('4aawyAB9vmqN3uQ7FjRGTy');
+    //   const tracks = getTracks('4aawyAB9vmqN3uQ7FjRGTy');
     //   tracks.then((data) => {
     //     expect(data).to.be.eql({ album: 'name' });
     //   });
