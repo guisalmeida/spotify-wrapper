@@ -1,5 +1,10 @@
 import { getToken } from './utils';
-import { search, searchArtists, searchAlbums, searchPlaylists } from './search';
+import {
+  search,
+  searchArtists,
+  searchAlbums,
+  searchPlaylists,
+} from './search';
 import { getAlbum, getAlbums, getAlbumTracks } from './album';
 
 export {
@@ -11,4 +16,4 @@ export {
   getAlbum,
   getAlbums,
   getAlbumTracks,
-}
+};

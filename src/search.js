@@ -1,11 +1,9 @@
 import { API_URL, HEADERS } from './config';
 import { toJSON } from './utils';
 
-const search = async (query, type) => {
-  return await fetch(`${API_URL}/search?q=${query}&type=${type}`, HEADERS)
-    .then(toJSON)
-    .then(result => result);
-};
+const search = (query, type) => fetch(`${API_URL}/search?q=${query}&type=${type}`, HEADERS)
+  .then(toJSON)
+  .then((result) => result);
 
 const searchArtists = (query) => search(query, 'artist');
 
