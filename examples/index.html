@@ -14,7 +14,6 @@
   <script>
     const template = async () => {
       const albumsEL = document.getElementById('albums');
-
       const albums = await spotifyWrapper.searchAlbums('incubus');
       const markup = await albums.albums.items.map(
         item => `<img src='${item.images[0].url}' alt='${item.name}'>`
