@@ -1,0 +1,13 @@
+language: node_js
+version:
+  - "10"
+
+cache:
+  diretories:
+    "node_modules"
+
+before_script:
+  - npm run build:all
+
+after_success:
+  - npm run test:coverage
