@@ -1,9 +1,10 @@
-import {API_URL} from './config';
-import {toJSON} from './utils';
+import { API_URL, HEADERS } from './config';
+import { toJSON } from './utils';
 
-const search = (query, type) => {
-  return fetch(`${API_URL}/search?q=${query}&type=${type}`)
-    .then(toJSON);
+const search = async (query, type) => {
+  return await fetch(`${API_URL}/search?q=${query}&type=${type}`, HEADERS)
+    .then(toJSON)
+    .then(result => result);
 };
 
 const searchArtists = (query) => search(query, 'artist');

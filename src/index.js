@@ -1,7 +1,9 @@
+import { getToken } from './utils';
 import { search, searchArtists, searchAlbums, searchPlaylists } from './search';
 import { getAlbum, getAlbums, getAlbumTracks } from './album';
 
-module.exports = {
+export {
+  getToken,
   search,
   searchArtists,
   searchAlbums,
