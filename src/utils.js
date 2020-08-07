@@ -1,5 +1,5 @@
-export const toJSON = (data) => data.json();
-
+const toJSON = (data) => data.json();
+export default toJSON;
 // import { CLIENT_ID, CLIENT_SECRET } from './config';
 
 // export const getToken = () => fetch('https://accounts.spotify.com/api/token', {

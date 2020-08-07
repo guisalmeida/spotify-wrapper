@@ -1,4 +1,4 @@
-import { getToken } from './utils';
+// import { getToken } from './utils';
 import {
   search,
   searchArtists,
@@ -8,7 +8,7 @@ import {
 import { getAlbum, getAlbums, getAlbumTracks } from './album';
 
 export {
-  getToken,
+  // getToken,
   search,
   searchArtists,
   searchAlbums,
