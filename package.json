@@ -18,7 +18,8 @@
     "coveralls": "npm run test:coverage && nyc report --reporter=text-lcov | coveralls"
   },
   "files": [
-    "dist","lib"
+    "dist",
+    "lib"
   ],
   "nyc": {
     "functions": 80,
@@ -49,6 +50,8 @@
   "homepage": "https://github.com/GuiSAlmeida/spotify-wrapper#readme",
   "devDependencies": {
     "@babel/cli": "^7.10.5",
+    "@babel/core": "^7.11.1",
+    "@babel/node": "^7.10.5",
     "@babel/plugin-transform-runtime": "^7.11.0",
     "@babel/preset-env": "^7.11.0",
     "@babel/register": "^7.10.5",

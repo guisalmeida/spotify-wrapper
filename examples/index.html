@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Spotify Wrapper Test</title>
 </head>
+
 <body>
 
   <div id="albums"></div>
@@ -12,9 +14,27 @@
   <script src="../dist/spotify-wrapper.umd.js"></script>
 
   <script>
+
+    // const getToken = () => fetch('https://accounts.spotify.com/api/token', {
+    //   method: 'POST',
+    //   headers: {
+    //     'Content-Type': 'application/x-www-form-urlencoded',
+    //     Authorization: `Basic ${btoa(`c57ce82bc3f744c9a1182def155edf76:7c9b5198ff1e443bb08e72ffc537843d`)}`,
+    //   },
+    //   body: 'grant_type=client_credentials',
+    // }).then((data) => data.json())
+    //   .then((result) => console.log(result.access_token));
+    // getToken();
+
     const template = async () => {
+      const spotify = new spotifyWrapper({
+        token: 'BQBt93tnQwdS7TUPhVsW5KYsaG6nYj-UuSSlzdpo4JrqxYkfV-XMEpNGR_aTyjQp51frSWXF8wm6opRzLCY',
+      });
+
+      const albums = await spotify.search.searchAlbums('snoopdogg');
+
       const albumsEL = document.getElementById('albums');
-      const albums = await spotifyWrapper.searchAlbums('incubus');
+
       const markup = await albums.albums.items.map(
         item => `<img src='${item.images[0].url}' alt='${item.name}'>`
       ).join('');
@@ -25,4 +45,5 @@
     template();
   </script>
 </body>
+
 </html>
